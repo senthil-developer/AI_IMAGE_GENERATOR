@@ -16,7 +16,7 @@ const ThemeOption = (props: Props) => {
     {value : 'tropical',imgUrl: '/tropical.png'},
     {value : 'vintage',imgUrl: '/vintage.png'},
   ]
-  const setTheme:any = useTheme ();
+  const setTheme:any = useTheme((state:any)=>state.setTheme);
   const handleClick = (e:React.MouseEvent<HTMLDivElement,MouseEvent>) => {
     document.querySelector('.selected')?.classList.remove('selected');
     e.currentTarget.classList.add('selected');
