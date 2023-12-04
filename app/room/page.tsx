@@ -1,10 +1,10 @@
 
 import React from 'react'
-import room from '@/components/room'
+import Room from '@/components/Room'
 
 const page = () => {
   return (
-    <room/>
+    <Room/>
   )
 }
 
