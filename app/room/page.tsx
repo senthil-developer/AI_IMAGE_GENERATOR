@@ -2,7 +2,14 @@
 import React from 'react'
 import Room from '@/components/Room'
 
-const page = () => {
+type Props = {
+  onChange : any,
+  options : any,
+  defaultValue : any,
+}
+
+
+const page = (props:Props) => {
   return (
     <Room/>
   )
