@@ -1,5 +1,5 @@
 
-import React, { ButtonHTMLAttributes } from 'react'
+import React from 'react'
 import UploadFile from '@/components/UploadFile'
 import SelectInput from '@/components/SelectInput'
 import ThemeOption from '@/components/ThemeOption'
@@ -10,7 +10,6 @@ type Props = {
   onChange : any,
   options : any,
   defaultValue : any,
-  GenerateBtn : any,
 }
 
 const page = (props: Props) => {
