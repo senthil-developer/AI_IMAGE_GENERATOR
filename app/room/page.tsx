@@ -6,6 +6,7 @@ type Props = {
   onChange : any,
   options : any,
   defaultValue : any,
+  Room : any,
 }
 
 
