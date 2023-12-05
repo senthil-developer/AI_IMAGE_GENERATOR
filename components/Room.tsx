@@ -5,13 +5,8 @@ import ThemeOption from '@/components/ThemeOption'
 import GenerateBtn from '@/components/GenerateBtn'
 import PreviewImg from '@/components/PreviewImg'
 
-type Props = {
-  onChange : any,
-  options : any,
-  defaultValue : any,
-}
 
-const page = (props: Props) => {
+const Room = () => {
   return (
     <div className='container mx-auto py-10'>
       <div className='w-full flex flex-col md:flex-row items-center md:items-stretch gap-20 px-10'>
@@ -42,4 +37,4 @@ const page = (props: Props) => {
   )
 }
 
-export default page
+export default Room
