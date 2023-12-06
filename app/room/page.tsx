@@ -1,4 +1,3 @@
-
 import React from 'react'
 import UploadFile from '@/components/UploadFile'
 import SelectInput from '@/components/SelectInput'
@@ -7,8 +6,7 @@ import GenerateBtn from '@/components/GenerateBtn'
 import PreviewImg from '@/components/PreviewImg'
 
 
-
-const page = () => {
+const RoomPage = () => {
   return (
     <div className='container mx-auto py-10'>
       <div className='w-full flex flex-col md:flex-row items-center md:items-stretch gap-20 px-10'>
@@ -39,4 +37,4 @@ const page = () => {
   )
 }
 
-export default page
+export default RoomPage
