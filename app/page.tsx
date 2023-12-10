@@ -10,7 +10,7 @@ export default function Home() {
         <p className='text-gray-500 text-lg text-center'>
           took a picture of a room and instantly redesign it in 8+ different themes options.Join thousand of happy customers and remodel your dream house today.
         </p>
-         <SignInButton redirectUrl={`/room`}>
+         <SignInButton afterSignInUrl='/room' afterSignUpUrl=/room''>
             <button className='bg-blue-500 rounded-sm hover:opacity-90 font-semibold py-3 px-5 '>Redesign your room</button>
          </SignInButton>
       </div>
