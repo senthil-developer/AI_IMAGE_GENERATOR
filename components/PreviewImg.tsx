@@ -10,7 +10,7 @@ const PreviewImg = (props: Props) => {
     const isGenerating = useLoading((state:any)=>state.isGenerating)
     const output = useOutput((state:any)=>state.output)
   return isLoading ? (
-    <div className={`${isGenerating && 'animate-pulse'} w-[350px] h-[200px] md:w-[500px] md:h-[300px] my-auto bg-slate-500 rounded-lg flex items-center justify-center `}>
+    <div className={`${isGenerating && 'animate-pulse'} animate-pulse w-[350px] h-[200px] md:w-[500px] md:h-[300px] my-auto bg-slate-500 rounded-lg flex items-center justify-center `}>
         <Image src='/couch.svg' alt="loading image" width={100} height={100}/>
     </div>
   ):(
