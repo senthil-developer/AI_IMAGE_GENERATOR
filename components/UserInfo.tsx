@@ -2,14 +2,16 @@
 import React from 'react'
 import {useUser,UserButton} from '@clerk/nextjs'
 import Link from 'next/link'
+import { SignInButton} from "@clerk/nextjs";
+
 type Props = {}
 
 const UserInfo = (props: Props) => {
     const {user} = useUser();
   return !user ? (
-    <Link href='/room' className='bg-gray-500 hover:opacity-90 rounded-lg text-white font-semibold px-5 py-3'>
-        Login 
-    </Link>
+             <SignInButton mode='modal' afterSignInUrl='/' afterSignUpUrl='/'>
+            <button className='bg-blue-500 rounded-sm hover:opacity-90 font-semibold py-3 px-5 '>Login</button>
+         </SignInButton>
   ) : (
         <UserButton/> 
   )
