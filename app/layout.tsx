@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import UserInfo from '@/components/UserInfo'
 import { ClerkProvider } from '@clerk/nextjs'
+import { EdgeStoreProvider } from '@/components/edgestore'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,7 +33,9 @@ export default function RootLayout({
             <UserInfo/>
           </div>
         </header>
+        <EdgeStoreProvider>
         {children}
+        </EdgeStoreProvider>
       </body>
     </html>
     </ClerkProvider>

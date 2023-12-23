@@ -3,11 +3,14 @@
 import { SingleImageDropzone } from './UploadFile';
 import { useEdgeStore } from './edgestore';
 import { useState } from 'react';
+import { useImage } from './store/UseStore';
+
 
 export default function SingleImageDropzoneUsage() {
   const [file, setFile] = useState<File>();
   const { edgestore } = useEdgeStore();
-
+  const setImageUrl = useImage((state:any)=>state.setImageUrl)
+  setImageUrl(file)
   return (
     <div>
       <SingleImageDropzone
@@ -16,26 +19,11 @@ export default function SingleImageDropzoneUsage() {
         value={file}
         onChange={(file) => {
           setFile(file);
+          setImageUrl(file)
         }}
+        {...setImageUrl(file)}
       />
-      <button
-        onClick={async () => {
-          if (file) {
-            const res = await edgestore.publicFiles.upload({
-              file,
-              onProgressChange: (progress) => {
-                // you can use this to show a progress bar
-                console.log(progress);
-              },
-            });
-            // you can run some server action or api here
-            // to add the necessary data to your database
-            console.log(res);
-          }
-        }}
-      >
-        Upload
-      </button>
+
     </div>
   );
 }
