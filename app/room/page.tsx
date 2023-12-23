@@ -1,5 +1,5 @@
 import React from 'react'
-import UploadFile from '@/components/UploadFile'
+import SingleUpload from '@/components/SingleUpload'
 import SelectInput from '@/components/SelectInput'
 import ThemeOption from '@/components/ThemeOption'
 import GenerateBtn from '@/components/GenerateBtn'
@@ -13,7 +13,7 @@ const RoomPage = () => {
         <div className='flex flex-col items-center gap-8 md:w-1/3'>
           <div className='flex flex-col items-center gap-5 w-full'>
             <h2 className='font-bold text-xl '>Upload a photo of your room</h2>
-            <UploadFile/>
+            <SingleUpload/>
           </div>
           <div className='flex flex-col items-center gap-5 w-full'>
             <h2 className='font-bold text-xl '>Select Room Type</h2>
